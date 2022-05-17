@@ -9,12 +9,3 @@ export default function PillHeader(props) {
 
   return <div className={style}>{props.value}</div>;
 }
-
-PillHeader.defaultProps = {
-  secondaryStyle: false,
-};
-
-PillHeader.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  secondaryStyle: React.PropTypes.bool,
-};
