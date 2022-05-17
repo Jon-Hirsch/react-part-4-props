@@ -1,26 +1,20 @@
-import React, {Component} from 'react';
-import './css/pillheader.css';
+import React from "react";
+import "./css/pillheader.css";
 
-export default class PillHeader extends Component {
-  render() {
-    let style = "pillHeader ";
-    if(this.props.secondaryStyle === true) {
-      style += "secondaryStyle";
-    } else {
-      style += "primaryStyle";
-    }
-
-    return (
-      <div className={style}>{this.props.value}</div>
-    );
+export default function PillHeader(props) {
+  let style = "pillHeader";
+  if (props.secondaryStyle === true) {
+    style += " secondaryStyle";
   }
+
+  return <div className={style}>{props.value}</div>;
 }
 
 PillHeader.defaultProps = {
-  secondaryStyle: false
+  secondaryStyle: false,
 };
 
 PillHeader.propTypes = {
   value: React.PropTypes.string.isRequired,
-  secondaryStyle: React.PropTypes.bool
+  secondaryStyle: React.PropTypes.bool,
 };

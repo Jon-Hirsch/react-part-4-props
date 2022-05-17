@@ -1,10 +1,5 @@
-import React from 'react';
-import {Component} from 'react';
+import React from "react";
 
-export default class HelloWorld extends Component {
-  render() {
-    return (
-      <h1>Hello World!</h1>
-    );
-  }
+export default function HelloWorld() {
+  return <h1>Hello World!</h1>;
 }
